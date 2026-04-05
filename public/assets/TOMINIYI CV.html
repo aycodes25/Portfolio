@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tominiyi Ayomide Olamidotun - CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #475569;
+            --text-dark: #1e293b;
+            --text-medium: #475569;
+            --text-light: #64748b;
+            --border-color: #e2e8f0;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color: var(--text-dark);
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            background: var(--white);
+            margin: 0 auto 20px;
+            padding: 20mm;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            page-break-after: always;
+            position: relative;
+        }
+
+        /* Header Section */
+        .cv-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .name {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text-dark);
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .title {
+            font-size: 18px;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-medium);
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-info-item i {
+            color: var(--primary-color);
+            width: 16px;
+        }
+
+        .contact-info-item a {
+            color: var(--text-medium);
+            text-decoration: none;
+        }
+
+        .contact-info-item a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--border-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title i {
+            font-size: 18px;
+        }
+
+        /* Professional Summary */
+        .summary-text {
+            font-size: 15px;
+            color: var(--text-medium);
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 25px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .job-date {
+            font-size: 14px;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .job-company {
+            font-size: 15px;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .job-description {
+            font-size: 14px;
+            color: var(--text-medium);
+            line-height: 1.7;
+            margin-bottom: 6px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .job-description:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .skill-category {
+            margin-bottom: 15px;
+        }
+
+        .skill-category-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-category-title:before {
+            content: "";
+            width: 4px;
+            height: 16px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            font-size: 13px;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .degree-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .degree-details {
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .degree-info {
+            font-size: 14px;
+            color: var(--text-medium);
+            font-style: italic;
+        }
+
+        /* Certifications */
+        .cert-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .cert-item {
+            font-size: 14px;
+            color: var(--text-medium);
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .cert-item:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .project-item {
+            margin-bottom: 25px;
+        }
+
+        .project-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .project-subtitle {
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            font-size: 14px;
+            color: var(--text-medium);
+            line-height: 1.7;
+            margin-bottom: 6px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .project-description:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Soft Skills */
+        .soft-skills-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .skill-item {
+            font-size: 14px;
+            color: var(--text-medium);
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-item:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            position: absolute;
+            bottom: 15mm;
+            left: 20mm;
+            right: 20mm;
+            display: flex;
+            justify-content: center;
+            font-size: 10px;
+            color: var(--text-light);
+            padding-top: 10px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .page-number {
+            font-weight: 600;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+            .skill-tag {
+                background: var(--bg-light) !important;
+                color: var(--text-dark) !important;
+                border: 1px solid var(--border-color) !important;
+            }
+        }
+
+        /* Two Column Layout for Skills */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div class="page">
+        <div class="cv-header">
+            <h1 class="name">Tominiyi Ayomide Olamidotun</h1>
+            <p class="title">Full Stack Software Engineer | UI/UX Designer</p>
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>House 12, Street 4, Wumba Estate, Apo Abuja, Nigeria</span>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+234 9036084447</span>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:tominiyiayomide068@gmail.com">tominiyiayomide068@gmail.com</a>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/tominiyi-ayomide-27251a385" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/aycodes25" target="_blank">github.com/aycodes25</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-user"></i> Professional Summary</h2>
+            <p class="summary-text">
+                Highly motivated and results-driven Full Stack Software Engineer with expertise in modern web/app technologies. Proficient in React, TypeScript, JavaScript, PHP, and cloud technologies. Proven track record of developing scalable web/app solutions, designing intuitive UI/UX, and delivering high-quality software products. Experienced in full-stack development, team collaboration, and training. Committed to leveraging technical skills and continuous learning to drive innovation in dynamic software development environments.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+            
+             <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Frontend Developer</div>
+                    <div class="job-date">Feb 2026 - March 2026</div>
+                </div>
+                <div class="job-company">NubiaPay (Contract Job - Remote)</div>
+                <div class="job-description">Redesign the Nubiapay app UI for the frontend</div>
+                <div class="job-description">Integrate live APIs and endpoints into the frontend, and perform testing to ensure proper functionality</div>
+                <div class="job-description">Identify errors and bugs, debug issues, and implement fixes</div>
+            </div>
+
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Full Stack Software Engineer</div>
+                    <div class="job-date">November 2025 - Present</div>
+                </div>
+                <div class="job-company">Ortho & Das Technology (Remote)</div>
+                <div class="job-description">Develop clean, maintainable, and efficient code for full-stack applications using modern frameworks and technologies</div>
+                <div class="job-description">Build responsive front-end applications using React, Next.js, TypeScript, and React Native for cross-platform solutions</div>
+                <div class="job-description">Implement robust back-end solutions with Node.js, Prisma ORM, PostgreSQL, and SQLite databases</div>
+                <div class="job-description">Collaborate with design, product, and QA teams to deliver high-quality features and user experiences</div>
+                <div class="job-description">Perform code reviews, troubleshoot issues, and optimize application performance following best practices</div>
+                <div class="job-description">Utilize Docker for containerization, NVM for Node version management, and Git/GitHub Desktop for version control</div>
+                <div class="job-description">Leverage AI debugging tools (Claude AI, ChatGPT, GitHub Copilot, Amazon Q, KOMBAI) to enhance development efficiency</div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Full Stack Developer & Trainer</div>
+                    <div class="job-date">April 2025 - November 2025</div>
+                </div>
+                <div class="job-company">GlobalTech World Computer Institute, Abuja</div>
+                <div class="job-description">Led development and deployment of a learning management system, improving digital resource access for 150+ students</div>
+                <div class="job-description">Trained 50+ students in software development fundamentals covering web and mobile app development</div>
+                <div class="job-description">Contributed to all phases of platform development lifecycle from concept, UI design, to testing and deployment</div>
+                <div class="job-description">Mentored junior developers on best practices, coding standards, and modern development workflows</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="page-number">Page 1 of 3</div>
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page">
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Technical Skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-title">Frontend Development</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Vite</span>
+                        <span class="skill-tag">Bootstrap</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">Backend Development & Databases</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Prisma ORM</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">DevOps & Tools</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">GitHub Desktop</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">NVM</span>
+                        <span class="skill-tag">ngrok</span>
+                        <span class="skill-tag">Expo</span>
+                        <span class="skill-tag">Expo Dev Build</span>
+                        <span class="skill-tag">Clickup</span>
+                        <span class="skill-tag">Expo Documentation</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">Design & Prototyping</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">CorelDraw</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">AI-Powered Development & Debugging Tools</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Claude AI</span>
+                        <span class="skill-tag">ChatGPT</span>
+                        <span class="skill-tag">GitHub Copilot</span>
+                        <span class="skill-tag">Amazon Q</span>
+                        <span class="skill-tag">KOMBAI</span>
+                        <span class="skill-tag">Replit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-laptop-code"></i> Selected Projects</h2>
+
+
+           
+            <div class="project-item">
+            <div class="project-title"> MyQRMenu App – Digital Menu Scan - (Live on Play Store)</div>         
+            <div class="project-subtitle">Full Stack Developer</div>
+            <div class="project-description">Implemented extensive UI enhancements to improve user experience</div>
+            <div class="project-description">Developed a feature allowing users to download restaurant menus and prices as PDF or image files on their devices</div>
+            <div class="project-description">Successfully migrated the backend database from Firebase to Prisma with SQLite</div>
+            <div class="project-description">Integrated review and rating functionality, enabling users to leave feedback on eateries</div>
+            <div class="project-description"><a href="https://www.myqrmenu.co/" target="_blank" style="color: red; text-decoration: none;">https://www.myqrmenu.co/</a></div>
+            </div>
+
+
+            <div class="project-item">
+            <div class="project-title">Endorsebase – AI Tool to Prepare for Tech Nation Endorsement</div>         
+            <div class="project-subtitle">Full Stack Developer</div>
+            <div class="project-description">Implemented extensive UI enhancements to improve user experience</div>
+            <div class="project-description">Successfully set up automatic Vercel deployment from GitHub</div>
+            <div class="project-description">Implemented Open Graph image preview meta tags for better social media sharing</div>
+            <div class="project-description"><a href="https://www.endorsebase.com/" target="_blank" style="color: red; text-decoration: none;">https://www.endorsebase.com/</a></div>
+            </div>
+
+
+            <div class="project-item">
+            <div class="project-title">Panda Display – Digital Display Solutions</div>         
+            <div class="project-subtitle">Full Stack Developer</div>
+            <div class="project-description">Implemented extensive UI enhancements to improve user experience</div>
+            <div class="project-description">Authored Terms of Service and Privacy Policy for the website application</div>
+            <div class="project-description">Implemented Open Graph image preview meta tags for better social media sharing</div>
+            <div class="project-description"><a href="https://www.pandadisplayltd.com/" target="_blank" style="color: red; text-decoration: none;">https://www.pandadisplayltd.com/</a></div>
+            </div>
+
+
+            <div class="project-item">
+            <div class="project-title">Tech Event Near Me – Documenting Global Tech Events (Open Source Project)</div>         
+            <div class="project-subtitle">Researcher & Documenter</div>
+            <div class="project-description">Researched and documented global tech events, including location, ticket pricing, languages spoken, and social media links to help people connect with events</div>
+            <div class="project-description"><a href="https://github.com/TechEventsNearMe/Tech-Events-Dataset" target="_blank" style="color: red; text-decoration: none;">https://github.com/TechEventsNearMe/Tech-Events-Dataset</a></div>
+            </div>
+
+
+            <div class="project-item">
+            <div class="project-title">React Native Nigeria </div>         
+            <div class="project-subtitle">Full Stack Developer</div>
+            <div class="project-description">Implemented extensive UI enhancements to improve user experience</div>
+            <div class="project-description">Added language translation functionality to the website</div>
+            <div class="project-description">Implemented Open Graph image preview meta tags for better social media sharing</div>
+            <div class="project-description"><a href="https://www.reactnativenigeria.com/" target="_blank" style="color: red; text-decoration: none;">https://www.reactnativenigeria.com/</a></div>
+            </div>
+
+
+        <div class="project-item">
+        <div class="project-title">Nubiapay Website App (Ongoing)</div>         
+        <div class="project-subtitle">Full Stack Developer</div>
+        <div class="project-description">Redesigned the Nubiapay app UI for the frontend</div>
+        <div class="project-description">Integrated live APIs and endpoints into the frontend, and performed testing to ensure proper functionality</div>
+        <div class="project-description">Implemented Open Graph image preview meta tags for better social media sharing</div>
+        <div class="project-description">Identified errors and bugs, debugged issues, and implemented fixes</div>
+        <div class="project-description"><a href="https://nubiapay.com/" target="_blank" style="color: red; text-decoration: none;">https://nubiapay.com/</a></div>
+        </div>
+
+
+                    
+            <div class="project-item">
+                <div class="project-title">AskMate - AI-Powered Real-Time Learning Platform</div>
+                <div class="project-subtitle">Lead Full Stack Developer (Ongoing)</div>
+                <div class="project-description">Building an innovative AI-powered web/mobile application providing live, real-time assistance across all academic and professional topics</div>
+                <div class="project-description">Architecting scalable real-time communication system using WebRTC and WebSockets for voice, video, and screen sharing capabilities</div>
+                <div class="project-description">Implementing AI-driven features: live interview practice with real-time feedback, student debate simulations, project defense rehearsals, and code debugging assistance</div>
+                <div class="project-description">Developing cross-platform solution using React/React Native with robust backend APIs for seamless user experience</div>
+                <div class="project-description">Designed MVP architecture prioritizing user experience, scalability, and accessibility with free-tier services for maximum reach</div>
+                <div class="project-description">Key features: Real-time AI questioning and feedback, live screen sharing with AI guidance, multi-topic support spanning all fields of study</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">EchoVerse - Church Presentation & Worship Management Software</div>
+                <div class="project-subtitle">Lead Software Developer (Ongoing)</div>
+                <div class="project-description">Developing comprehensive church service management system with real-time presentation capabilities for projector-based displays and audience engagement</div>
+                <div class="project-description">Implementing AI-powered speech-to-text engine for live sermon transcription, enabling real-time on-screen text conversion during services</div>
+                <div class="project-description">Building intelligent content recognition system with AI-assisted automatic scripture and lyrics display based on detected audio input</div>
+                <div class="project-description">Architecting digital order of service management with integrated timers for sermons, worship sessions, and announcements</div>
+                <div class="project-description">Developing multi-format media handling system supporting Bible scriptures (multiple versions), worship lyrics, images, and video projection</div>
+                <div class="project-description">Designed real-time event coordination system improving service flow, audience engagement, and multimedia synchronization</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">CraftedMettle Furniture Website</div>
+                <div class="project-subtitle">Full Stack Developer (Personal Project)</div>
+                <div class="project-description">Building a cross-platform mobile furniture e-commerce store using React Native frontend and PHP/MySQL backend</div>
+                <div class="project-description">Designing and implementing core e-commerce features: real-time inventory management, secure authentication, and user account management</div>
+                <div class="project-description">Implementing responsive design and dynamic functionality to serve 1,000+ potential clients upon launch</div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-title">UI/UX Design Portfolio</div>
+                <div class="project-subtitle">Responsive Web Design & User Experience</div>
+                <div class="project-description">Designed user-friendly interfaces for major platforms: DreamSpace App, Coffee website, Echo-verse project, AskMate, Jewlry shop, etc. </div>
+                <div class="project-description">Focused on creating user-centric, responsive, and aesthetically pleasing mockups showcasing modern design trends</div>
+                <div class="project-description">Applied best practices in accessibility, usability, and visual hierarchy to enhance user engagement</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> Core Competencies</h2>
+            <div class="soft-skills-list">
+                <div class="skill-item">Excellent Communication & Training</div>
+                <div class="skill-item">Complex Problem-Solving</div>
+                <div class="skill-item">Teamwork & Collaboration</div>
+                <div class="skill-item">Adaptability & Quick Learning</div>
+                <div class="skill-item">Agile Development Methodologies</div>
+                <div class="skill-item">Code Review & Quality Assurance</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="page-number">Page 2 of 3</div>
+        </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page">
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-certificate"></i> Professional Certifications</h2>
+            <div class="cert-list">
+                <div class="cert-item">Professional Diploma in Software Development - (AUST), Abuja (2023-2025) </div>
+                <div class="cert-item">Diploma in Software Engineering - GlobalTech World Institute, Nigeria (2024-2025)</div>
+                <div class="cert-item">Google Professional Certificate - Google (Coursera)</div>
+                <div class="cert-item">Responsive Web Design Certificate - FreeCodeCamp (2025)</div>
+                <div class="cert-item">Design Thinking Certification - Professional Development Program</div>
+                <div class="cert-item">Digital Marketing Certificate - Professional Marketing Course</div>
+                <div class="cert-item">Web Design & Development Certificate - Professional Training</div>
+                <div class="cert-item">Soft Skills Development Certificate - Professional Training Program</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            
+            <div class="education-item">
+                <div class="degree-title">Professional Diploma in Software Development</div>
+                <div class="degree-details">African University of Science and Technology (AUST), Abuja | 2023 - 2025</div>
+                <div class="degree-info">Degree Classification: First Class (CGPA: 4.89)</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="degree-title">Higher National Diploma (HND) in Civil Engineering</div>
+                <div class="degree-details">Yaba College of Technology, Lagos | 2020 - 2023</div>
+                <div class="degree-info">Degree Classification: Upper Credit (CGPA: 3.08)</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree-title">Diploma in Software Engineering</div>
+                <div class="degree-details">GlobalTech World Institute, Nigeria | 2024 - 2025</div>
+                <div class="degree-info">Comprehensive training in full-stack development, software architecture, and best practices</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="degree-title">Senior School Certificate Examination (SSCE)</div>
+                <div class="degree-details">Methodist High School, Ekiti State, Nigeria | 2009 - 2015</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-globe"></i> Languages</h2>
+            <div class="soft-skills-list">
+                <div class="skill-item">English (Fluent - Professional Working Proficiency)</div>
+                <div class="skill-item">Yoruba (Native)</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-award"></i> Professional Highlights</h2>
+            <div class="cert-list">
+                <div class="cert-item">Developed and deployed learning management system serving 150+ students</div>
+                <div class="cert-item">Successfully trained 50+ students in software development fundamentals</div>
+                <div class="cert-item">Designed UI/UX mockups for 5+ major international platforms</div>
+                <div class="cert-item">Active contributor to open-source projects on GitHub</div>
+                <div class="cert-item">Proficient in remote collaboration and agile development practices</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="page-number">Page 3 of 3</div>
+        </div>
+    </div>
+    <script src="js/theme.js"></script>
+</body>
+</html>
