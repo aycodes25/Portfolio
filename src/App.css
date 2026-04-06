@@ -909,6 +909,15 @@
     gap: 0.5rem;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    overflow-x: auto;
+    align-items: center;
+  }
+
+  .app-badge-link,
+  .play-badge-link {
+    display: inline-flex;
+    min-width: 0;
+    white-space: nowrap;
   }
 
   .app-badge-link img,
@@ -1677,30 +1686,39 @@
 
 @media (max-width: 600px) {
   .featured-mockup.two-phones {
-    min-height: 340px;
+    min-height: 320px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: -30px;
+    gap: 10px;
     overflow: visible;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   .phone-stack-1,
   .phone-stack-2 {
     position: relative !important;
-    transform: scale(0.65) !important;
+    transform: scale(0.72) !important;
     opacity: 1 !important;
     flex-shrink: 0;
   }
 
   .phone-stack-1 {
     z-index: 1;
-    margin-right: -30px;
+    margin-right: -62px;
   }
 
   .phone-stack-2 {
     z-index: 2;
+    margin-left:0px;
+  }
+
+  .phone-stack-2 {
+    z-index: 2;
+    margin-left: 0;
   }
 }
 
@@ -1734,9 +1752,9 @@
   /* White face */
   border-color: #d1d1d1;
   /* Premium silver frame */
-  box-shadow:
+  /* box-shadow:
     0 30px 60px -20px rgba(0, 0, 0, 0.3),
-    inset 0 0 1px 1px rgba(255, 255, 255, 0.8);
+    inset 0 0 1px 1px rgba(255, 255, 255, 0.8); */
 }
 
 .silver-theme .phone-notch {
@@ -1764,7 +1782,7 @@
 
 @media (max-width: 600px) {
   .direct-phone-img {
-    width: 200px;
+    width: 180px;
   }
 }
 
