@@ -207,6 +207,10 @@ button {
   .section-title {
     font-size: 2rem;
   }
+
+  #education .section-title {
+    font-size: 1.5rem;
+  }
 }
 
 .section-title::after {
