@@ -56,7 +56,7 @@ const Projects = () => {
     <section id="projects" className="section-padding bg-accent-light">
       <div className="container">
         <motion.h2
-          className="section-title"
+          className="section-title text-left"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -165,18 +165,18 @@ const Projects = () => {
                   <div className="project-role">{project.role}</div>
                   <p className="project-desc">{project.desc}</p>
                 </div>
-                
+
                 <div className="project-links mt-auto">
-                    {project.link && (
-                      <a href={project.link} target="_blank" rel="noreferrer" className="project-link">
-                        <ExternalLink size={16} /> {project.title === 'React Native Nigeria' ? 'Live Demo' : 'Website'}
-                      </a>
-                    )}
-                    {project.github && (
-                      <a href={project.github} target="_blank" rel="noreferrer" className="project-link">
-                        <Github size={16} /> Repository
-                      </a>
-                    )}
+                  {project.link && (
+                    <a href={project.link} target="_blank" rel="noreferrer" className="project-link">
+                      <ExternalLink size={16} /> {project.title === 'React Native Nigeria' ? 'Live Demo' : 'Website'}
+                    </a>
+                  )}
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noreferrer" className="project-link">
+                      <Github size={16} /> Repository
+                    </a>
+                  )}
                 </div>
               </motion.div>
             );

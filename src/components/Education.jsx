@@ -21,7 +21,7 @@ const Education = () => {
       years: '2023 - 2025',
       note: 'First Class (CGPA: 4.89)'
     },
-    
+
     {
       degree: 'Diploma in Software Engineering',
       inst: 'GlobalTech World Institute, Nigeria',
@@ -45,7 +45,7 @@ const Education = () => {
     <section id="education" className="section-padding">
       <div className="container">
         <motion.h2
-          className="section-title"
+          className="section-title text-left"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}

@@ -60,7 +60,7 @@ const Experience = () => {
     <section id="experience" className="section-padding bg-accent-light">
       <div className="container">
         <motion.h2
-          className="section-title"
+          className="section-title text-left"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}

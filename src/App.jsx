@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from './components/Navbar';
 import Preloader from './components/Preloader';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -14,7 +13,6 @@ function App() {
   return (
     <div className="app">
       <Preloader />
-      <Navbar />
       <main>
         <Hero />
         <Services />
