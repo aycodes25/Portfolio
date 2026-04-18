@@ -38,17 +38,7 @@ const About = () => {
           >
             <h3>Professional Summary</h3>
             <p className="summary-text">
-              Highly motivated and results-driven Full Stack Software Engineer with expertise in modern web/app technologies
-              and a strong foundation in Civil Engineering (Upper Credit, CGPA: 3.08).
-            </p>
-            <p className="summary-text">
-              Proficient in React, TypeScript, JavaScript, PHP, and cloud technologies. Proven track record of developing
-              scalable web/app solutions, designing intuitive UI/UX, and delivering high-quality software products.
-              Experienced in full-stack development, team collaboration, and training.
-            </p>
-            <p className="summary-text">
-              Committed to leveraging technical skills and continuous learning to drive innovation in dynamic
-              software development environments.
+              Innovative Full Stack Engineer specializing in modern web/app technologies. Passionate about building robust applications, crafting intuitive UI/UX, and delivering high-quality software solutions from concept to deployment.
             </p>
 
             <div className="info-grid">
@@ -60,9 +50,6 @@ const About = () => {
               </div>
               <div className="info-item">
                 <span className="info-label">Email:</span> tominiyiayomide068@gmail.com
-              </div>
-              <div className="info-item">
-                <span className="info-label">Languages:</span> English, Yoruba
               </div>
             </div>
           </motion.div>

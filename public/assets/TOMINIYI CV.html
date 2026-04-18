@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,9 +38,11 @@
             width: 210mm;
             min-height: 297mm;
             background: var(--white);
-            margin: 0 auto 20px;
-            padding: 20mm;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 0 auto 15px;
+            /* Reduced from 20px */
+            padding: 12mm 15mm;
+            /* Reduced from 20mm */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             page-break-after: always;
             position: relative;
         }
@@ -47,25 +50,31 @@
         /* Header Section */
         .cv-header {
             text-align: center;
-            margin-bottom: 35px;
-            padding-bottom: 25px;
+            margin-bottom: 20px;
+            /* Reduced from 35px */
+            padding-bottom: 15px;
+            /* Reduced from 25px */
             border-bottom: 3px solid var(--primary-color);
         }
 
         .name {
-            font-size: 36px;
+            font-size: 32px;
+            /* Reduced from 36px */
             font-weight: 700;
             color: var(--text-dark);
             letter-spacing: 1px;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
+            /* Reduced from 10px */
             text-transform: uppercase;
         }
 
         .title {
-            font-size: 18px;
+            font-size: 17px;
+            /* Reduced from 18px */
             color: var(--primary-color);
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
+            /* Reduced from 20px */
         }
 
         .contact-info {
@@ -99,18 +108,22 @@
 
         /* Section Styling */
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            /* Reduced from 30px */
         }
 
         .section-title {
-            font-size: 20px;
+            font-size: 18px;
+            /* Reduced from 20px */
             font-weight: 700;
             color: var(--primary-color);
-            margin-bottom: 15px;
-            padding-bottom: 8px;
+            margin-bottom: 10px;
+            /* Reduced from 15px */
+            padding-bottom: 5px;
+            /* Reduced from 8px */
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             border-bottom: 2px solid var(--border-color);
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -128,9 +141,11 @@
             text-align: justify;
         }
 
-        /* Experience Section */
-        .experience-item {
-            margin-bottom: 25px;
+        /* Experience & Projects Section */
+        .experience-item,
+        .project-item {
+            margin-bottom: 15px;
+            /* Reduced from 25px */
         }
 
         .job-header {
@@ -179,7 +194,8 @@
         /* Skills Section */
         .skills-grid {
             display: grid;
-            gap: 20px;
+            gap: 12px;
+            /* Reduced from 20px */
         }
 
         .skill-category {
@@ -229,7 +245,8 @@
 
         /* Education Section */
         .education-item {
-            margin-bottom: 20px;
+            margin-bottom: 12px;
+            /* Reduced from 20px */
         }
 
         .degree-title {
@@ -276,7 +293,8 @@
 
         /* Projects Section */
         .project-item {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
+            /* Reduced from 25px */
         }
 
         .project-title {
@@ -335,7 +353,7 @@
         /* Footer */
         .footer {
             position: absolute;
-            bottom: 15mm;
+            bottom: 10mm;
             left: 20mm;
             right: 20mm;
             display: flex;
@@ -356,11 +374,13 @@
                 background: white;
                 padding: 0;
             }
+
             .page {
                 margin: 0;
                 box-shadow: none;
                 page-break-after: always;
             }
+
             .skill-tag {
                 background: var(--bg-light) !important;
                 color: var(--text-dark) !important;
@@ -376,6 +396,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Page 1 -->
     <div class="page">
@@ -413,21 +434,24 @@
         <div class="section">
             <h2 class="section-title"><i class="fas fa-user"></i> Professional Summary</h2>
             <p class="summary-text">
-                Highly motivated and results-driven Full Stack Software Engineer with expertise in modern web/app technologies. Proficient in React, TypeScript, JavaScript, PHP, and cloud technologies. Proven track record of developing scalable web/app solutions, designing intuitive UI/UX, and delivering high-quality software products. Experienced in full-stack development, team collaboration, and training. Committed to leveraging technical skills and continuous learning to drive innovation in dynamic software development environments.
+                Innovative Full Stack Engineer specializing in modern web/app technologies. Passionate about building
+                robust applications, crafting intuitive UI/UX, and delivering high-quality software solutions from
+                concept to deployment.
             </p>
         </div>
 
         <div class="section">
             <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
-            
-             <div class="experience-item">
+
+            <div class="experience-item">
                 <div class="job-header">
                     <div class="job-title">Frontend Developer</div>
                     <div class="job-date">Feb 2026 - March 2026</div>
                 </div>
                 <div class="job-company">NubiaPay (Contract Job - Remote)</div>
                 <div class="job-description">Redesign the Nubiapay app UI for the frontend</div>
-                <div class="job-description">Integrate live APIs and endpoints into the frontend, and perform testing to ensure proper functionality</div>
+                <div class="job-description">Integrate live APIs and endpoints into the frontend, and perform testing to
+                    ensure proper functionality</div>
                 <div class="job-description">Identify errors and bugs, debug issues, and implement fixes</div>
             </div>
 
@@ -438,13 +462,20 @@
                     <div class="job-date">November 2025 - Present</div>
                 </div>
                 <div class="job-company">Ortho & Das Technology (Remote)</div>
-                <div class="job-description">Develop clean, maintainable, and efficient code for full-stack applications using modern frameworks and technologies</div>
-                <div class="job-description">Build responsive front-end applications using React, Next.js, TypeScript, and React Native for cross-platform solutions</div>
-                <div class="job-description">Implement robust back-end solutions with Node.js, Prisma ORM, PostgreSQL, and SQLite databases</div>
-                <div class="job-description">Collaborate with design, product, and QA teams to deliver high-quality features and user experiences</div>
-                <div class="job-description">Perform code reviews, troubleshoot issues, and optimize application performance following best practices</div>
-                <div class="job-description">Utilize Docker for containerization, NVM for Node version management, and Git/GitHub Desktop for version control</div>
-                <div class="job-description">Leverage AI debugging tools (Claude AI, ChatGPT, GitHub Copilot, Amazon Q, KOMBAI) to enhance development efficiency</div>
+                <div class="job-description">Develop clean, maintainable, and efficient code for full-stack applications
+                    using modern frameworks and technologies</div>
+                <div class="job-description">Build responsive front-end applications using React, Next.js, TypeScript,
+                    and React Native for cross-platform solutions</div>
+                <div class="job-description">Implement robust back-end solutions with Node.js, Prisma ORM, PostgreSQL,
+                    and SQLite databases</div>
+                <div class="job-description">Collaborate with design, product, and QA teams to deliver high-quality
+                    features and user experiences</div>
+                <div class="job-description">Perform code reviews, troubleshoot issues, and optimize application
+                    performance following best practices</div>
+                <div class="job-description">Utilize Docker for containerization, NVM for Node version management, and
+                    Git/GitHub Desktop for version control</div>
+                <div class="job-description">Leverage AI debugging tools (Claude AI, ChatGPT, GitHub Copilot, Amazon Q,
+                    KOMBAI) to enhance development efficiency</div>
             </div>
 
             <div class="experience-item">
@@ -453,10 +484,14 @@
                     <div class="job-date">April 2025 - November 2025</div>
                 </div>
                 <div class="job-company">GlobalTech World Computer Institute, Abuja</div>
-                <div class="job-description">Led development and deployment of a learning management system, improving digital resource access for 150+ students</div>
-                <div class="job-description">Trained 50+ students in software development fundamentals covering web and mobile app development</div>
-                <div class="job-description">Contributed to all phases of platform development lifecycle from concept, UI design, to testing and deployment</div>
-                <div class="job-description">Mentored junior developers on best practices, coding standards, and modern development workflows</div>
+                <div class="job-description">Led development and deployment of a learning management system, improving
+                    digital resource access for 150+ students</div>
+                <div class="job-description">Trained 50+ students in software development fundamentals covering web and
+                    mobile app development</div>
+                <div class="job-description">Contributed to all phases of platform development lifecycle from concept,
+                    UI design, to testing and deployment</div>
+                <div class="job-description">Mentored junior developers on best practices, coding standards, and modern
+                    development workflows</div>
             </div>
         </div>
 
@@ -469,7 +504,7 @@
     <div class="page">
         <div class="section">
             <h2 class="section-title"><i class="fas fa-code"></i> Technical Skills</h2>
-            
+
             <div class="skills-grid">
                 <div class="skill-category">
                     <div class="skill-category-title">Frontend Development</div>
@@ -545,133 +580,116 @@
         <div class="section">
             <h2 class="section-title"><i class="fas fa-laptop-code"></i> Selected Projects</h2>
 
-
-           
             <div class="project-item">
-            <div class="project-title"> MyQRMenu App – Digital Menu Scan - (Live on Play Store)</div>         
-            <div class="project-subtitle">Full Stack Developer</div>
-            <div class="project-description">Implemented extensive UI enhancements to improve user experience</div>
-            <div class="project-description">Developed a feature allowing users to download restaurant menus and prices as PDF or image files on their devices</div>
-            <div class="project-description">Successfully migrated the backend database from Firebase to Prisma with SQLite</div>
-            <div class="project-description">Integrated review and rating functionality, enabling users to leave feedback on eateries</div>
-            <div class="project-description"><a href="https://www.myqrmenu.co/" target="_blank" style="color: red; text-decoration: none;">https://www.myqrmenu.co/</a></div>
+                <div class="project-title">MyQRMenu App – Digital Menu Scan (Live on Play Store)</div>
+                <div class="project-subtitle">Full Stack Developer</div>
+                <div><a href="https://www.myqrmenu.co/" target="_blank"
+                        style="color: red; text-decoration: none; font-size: 14px;">https://www.myqrmenu.co/</a></div>
             </div>
 
-
             <div class="project-item">
-            <div class="project-title">Endorsebase – AI Tool to Prepare for Tech Nation Endorsement</div>         
-            <div class="project-subtitle">Full Stack Developer</div>
-            <div class="project-description">Implemented extensive UI enhancements to improve user experience</div>
-            <div class="project-description">Successfully set up automatic Vercel deployment from GitHub</div>
-            <div class="project-description">Implemented Open Graph image preview meta tags for better social media sharing</div>
-            <div class="project-description"><a href="https://www.endorsebase.com/" target="_blank" style="color: red; text-decoration: none;">https://www.endorsebase.com/</a></div>
+                <div class="project-title">Endorsebase – AI Tool for Tech Nation Endorsement</div>
+                <div class="project-subtitle">Full Stack Developer</div>
+                <div><a href="https://www.endorsebase.com/" target="_blank"
+                        style="color: red; text-decoration: none; font-size: 14px;">https://www.endorsebase.com/</a>
+                </div>
             </div>
 
-
             <div class="project-item">
-            <div class="project-title">Panda Display – Digital Display Solutions</div>         
-            <div class="project-subtitle">Full Stack Developer</div>
-            <div class="project-description">Implemented extensive UI enhancements to improve user experience</div>
-            <div class="project-description">Authored Terms of Service and Privacy Policy for the website application</div>
-            <div class="project-description">Implemented Open Graph image preview meta tags for better social media sharing</div>
-            <div class="project-description"><a href="https://www.pandadisplayltd.com/" target="_blank" style="color: red; text-decoration: none;">https://www.pandadisplayltd.com/</a></div>
+                <div class="project-title">Panda Display – Digital Display Solutions</div>
+                <div class="project-subtitle">Full Stack Developer</div>
+                <div><a href="https://www.pandadisplayltd.com/" target="_blank"
+                        style="color: red; text-decoration: none; font-size: 14px;">https://www.pandadisplayltd.com/</a>
+                </div>
             </div>
 
-
             <div class="project-item">
-            <div class="project-title">Tech Event Near Me – Documenting Global Tech Events (Open Source Project)</div>         
-            <div class="project-subtitle">Researcher & Documenter</div>
-            <div class="project-description">Researched and documented global tech events, including location, ticket pricing, languages spoken, and social media links to help people connect with events</div>
-            <div class="project-description"><a href="https://github.com/TechEventsNearMe/Tech-Events-Dataset" target="_blank" style="color: red; text-decoration: none;">https://github.com/TechEventsNearMe/Tech-Events-Dataset</a></div>
+                <div class="project-title">Tech Event Near Me (Open Source Project)</div>
+                <div class="project-subtitle">Researcher & Documenter</div>
+                <div><a href="https://github.com/TechEventsNearMe/Tech-Events-Dataset" target="_blank"
+                        style="color: red; text-decoration: none; font-size: 14px;">https://github.com/TechEventsNearMe/Tech-Events-Dataset</a>
+                </div>
             </div>
 
-
             <div class="project-item">
-            <div class="project-title">React Native Nigeria </div>         
-            <div class="project-subtitle">Full Stack Developer</div>
-            <div class="project-description">Implemented extensive UI enhancements to improve user experience</div>
-            <div class="project-description">Added language translation functionality to the website</div>
-            <div class="project-description">Implemented Open Graph image preview meta tags for better social media sharing</div>
-            <div class="project-description"><a href="https://www.reactnativenigeria.com/" target="_blank" style="color: red; text-decoration: none;">https://www.reactnativenigeria.com/</a></div>
+                <div class="project-title">Iboju.app (Open Source Project)</div>
+                <div class="project-subtitle">Full Stack Developer</div>
+                <div><a href="https://github.com/react-native-nigeria-community/iboju.app" target="_blank"
+                        style="color: red; text-decoration: none; font-size: 14px;">https://github.com/react-native-nigeria-community/iboju.app</a>
+                </div>
             </div>
 
-
-        <div class="project-item">
-        <div class="project-title">Nubiapay Website App (Ongoing)</div>         
-        <div class="project-subtitle">Full Stack Developer</div>
-        <div class="project-description">Redesigned the Nubiapay app UI for the frontend</div>
-        <div class="project-description">Integrated live APIs and endpoints into the frontend, and performed testing to ensure proper functionality</div>
-        <div class="project-description">Implemented Open Graph image preview meta tags for better social media sharing</div>
-        <div class="project-description">Identified errors and bugs, debugged issues, and implemented fixes</div>
-        <div class="project-description"><a href="https://nubiapay.com/" target="_blank" style="color: red; text-decoration: none;">https://nubiapay.com/</a></div>
-        </div>
-
-
             <div class="project-item">
-            <div class="project-title">Asoc Website</div>         
-            <div class="project-subtitle">Frontend Developer</div>
-            <div class="project-description">Developed the website from scratch with a responsive and modern UI</div>
-            <div class="project-description">Deployed successfully on a hosting platform</div>
-            <div class="project-description">Implemented form submission functionality using EmailJS</div>
-            <div class="project-description"><a href="https://asoc.com.ng/" target="_blank" style="color: red; text-decoration: none;">Visit Website</a></div>
+                <div class="project-title">React Native Nigeria</div>
+                <div class="project-subtitle">Full Stack Developer</div>
+                <div><a href="https://www.reactnativenigeria.com/" target="_blank"
+                        style="color: red; text-decoration: none; font-size: 14px;">https://www.reactnativenigeria.com/</a>
+                </div>
             </div>
 
-
             <div class="project-item">
-            <div class="project-title">Panda Display Ltd Website</div>         
-            <div class="project-subtitle">Frontend Developer</div>
-            <div class="project-description">Designed and developed the company website from scratch with a modern, responsive layout</div>
-            <div class="project-description">Deployed on a reliable hosting platform for production use</div>
-            <div class="project-description"><a href="https://www.pandadisplayltd.com/" target="_blank" style="color: red; text-decoration: none;">Visit Website</a></div>
+                <div class="project-title">Build With React Native</div>
+                <div class="project-subtitle">Frontend Developer</div>
+                <div><a href="https://www.buildwithreactnative.com/" target="_blank"
+                        style="color: red; text-decoration: none; font-size: 14px;">https://www.buildwithreactnative.com/</a>
+                </div>
             </div>
 
-            
             <div class="project-item">
-            <div class="project-title">Kiskas Website</div>         
-            <div class="project-subtitle">Frontend Developer</div>
-            <div class="project-description">Built and developed the website from scratch with a clean, responsive design</div>
-            <div class="project-description">Deployed on a hosting platform for live production use</div>
-            <div class="project-description">Implemented interactive features and form submission using EmailJS</div>
-            <div class="project-description"><a href="https://www.kiskas.xyz/" target="_blank" style="color: red; text-decoration: none;">Visit Website</a></div>
+                <div class="project-title">Nubiapay Website App (Ongoing)</div>
+                <div class="project-subtitle">Full Stack Developer</div>
+                <div><a href="https://nubiapay.com/" target="_blank"
+                        style="color: red; text-decoration: none; font-size: 14px;">https://nubiapay.com/</a></div>
             </div>
 
+            <div class="project-item">
+                <div class="project-title">Asoc Website</div>
+                <div class="project-subtitle">Frontend Developer</div>
+                <div><a href="https://asoc.com.ng/" target="_blank"
+                        style="color: red; text-decoration: none; font-size: 14px;">https://asoc.com.ng/</a></div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Kiskas Website</div>
+                <div class="project-subtitle">Frontend Developer</div>
+                <div><a href="https://www.kiskas.xyz/" target="_blank"
+                        style="color: red; text-decoration: none; font-size: 14px;">https://www.kiskas.xyz/</a></div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Go-Delivery (Ongoing)</div>
+                <div class="project-subtitle">Full Stack Developer</div>
+                <div><a href="https://website-iugf.vercel.app/" target="_blank"
+                        style="color: red; text-decoration: none; font-size: 14px;">https://website-iugf.vercel.app/</a>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Rentro app (Ongoing)</div>
+                <div class="project-subtitle">Full Stack Developer</div>
+                <div><a href="https://github.com/aycodes25/Rentro-backend" target="_blank"
+                        style="color: red; text-decoration: none; font-size: 14px;">https://github.com/aycodes25/Rentro-backend</a>
+                </div>
+            </div>
 
             <div class="project-item">
                 <div class="project-title">AskMate - AI-Powered Real-Time Learning Platform</div>
                 <div class="project-subtitle">Lead Full Stack Developer (Ongoing)</div>
-                <div class="project-description">Building an innovative AI-powered web/mobile application providing live, real-time assistance across all academic and professional topics</div>
-                <div class="project-description">Architecting scalable real-time communication system using WebRTC and WebSockets for voice, video, and screen sharing capabilities</div>
-                <div class="project-description">Implementing AI-driven features: live interview practice with real-time feedback, student debate simulations, project defense rehearsals, and code debugging assistance</div>
-                <div class="project-description">Developing cross-platform solution using React/React Native with robust backend APIs for seamless user experience</div>
-                <div class="project-description">Designed MVP architecture prioritizing user experience, scalability, and accessibility with free-tier services for maximum reach</div>
-                <div class="project-description">Key features: Real-time AI questioning and feedback, live screen sharing with AI guidance, multi-topic support spanning all fields of study</div>
             </div>
 
             <div class="project-item">
-                <div class="project-title">EchoVerse - Church Presentation & Worship Management Software</div>
+                <div class="project-title">EchoVerse - Church Presentation & Worship Management</div>
                 <div class="project-subtitle">Lead Software Developer (Ongoing)</div>
-                <div class="project-description">Developing comprehensive church service management system with real-time presentation capabilities for projector-based displays and audience engagement</div>
-                <div class="project-description">Implementing AI-powered speech-to-text engine for live sermon transcription, enabling real-time on-screen text conversion during services</div>
-                <div class="project-description">Building intelligent content recognition system with AI-assisted automatic scripture and lyrics display based on detected audio input</div>
-                <div class="project-description">Architecting digital order of service management with integrated timers for sermons, worship sessions, and announcements</div>
-                <div class="project-description">Developing multi-format media handling system supporting Bible scriptures (multiple versions), worship lyrics, images, and video projection</div>
-                <div class="project-description">Designed real-time event coordination system improving service flow, audience engagement, and multimedia synchronization</div>
             </div>
 
             <div class="project-item">
                 <div class="project-title">CraftedMettle Furniture Website</div>
                 <div class="project-subtitle">Full Stack Developer (Personal Project)</div>
-                <div class="project-description">Building a cross-platform mobile furniture e-commerce store using React Native frontend and PHP/MySQL backend</div>
-                <div class="project-description">Designing and implementing core e-commerce features: real-time inventory management, secure authentication, and user account management</div>
-                <div class="project-description">Implementing responsive design and dynamic functionality to serve 1,000+ potential clients upon launch</div>
             </div>
-            
+
             <div class="project-item">
                 <div class="project-title">UI/UX Design Portfolio</div>
                 <div class="project-subtitle">Responsive Web Design & User Experience</div>
-                <div class="project-description">Designed user-friendly interfaces for major platforms: DreamSpace App, Coffee website, Echo-verse project, AskMate, Jewlry shop, etc. </div>
-                <div class="project-description">Focused on creating user-centric, responsive, and aesthetically pleasing mockups showcasing modern design trends</div>
-                <div class="project-description">Applied best practices in accessibility, usability, and visual hierarchy to enhance user engagement</div>
             </div>
         </div>
 
@@ -698,7 +716,8 @@
             <h2 class="section-title"><i class="fas fa-certificate"></i> Professional Certifications</h2>
             <div class="cert-list">
                 <div class="cert-item">Professional Diploma in Software Development - (AUST), Abuja (2023-2025) </div>
-                <div class="cert-item">Diploma in Software Engineering - GlobalTech World Institute, Nigeria (2024-2025)</div>
+                <div class="cert-item">Diploma in Software Engineering - GlobalTech World Institute, Nigeria (2024-2025)
+                </div>
                 <div class="cert-item">Google Professional Certificate - Google (Coursera)</div>
                 <div class="cert-item">Responsive Web Design Certificate - FreeCodeCamp (2025)</div>
                 <div class="cert-item">Design Thinking Certification - Professional Development Program</div>
@@ -710,38 +729,40 @@
 
         <div class="section">
             <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
-            
+
             <div class="-item">
                 <div class="degree-title">Professional Diploma in Software Development</div>
-                <div class="degree-details">African University of Science and Technology (AUST), Abuja | 2023 - 2025</div>
+                <div class="degree-details">African University of Science and Technology (AUST), Abuja | 2023 - 2025
+                </div>
                 <div class="degree-info">Degree Classification: First Class (CGPA: 4.89)</div>
             </div>
-            
-            <div class="-item">
+
+            <!-- <div class="-item">
                 <div class="degree-title">Higher National Diploma (HND) in Civil Engineering</div>
                 <div class="degree-details">Yaba College of Technology, Lagos | 2020 - 2023</div>
                 <div class="degree-info">Degree Classification: Upper Credit (CGPA: 3.08)</div>
-            </div>
+            </div> -->
 
             <div class="education-item">
                 <div class="degree-title">Diploma in Software Engineering</div>
                 <div class="degree-details">GlobalTech World Institute, Nigeria | 2024 - 2025</div>
-                <div class="degree-info">Comprehensive training in full-stack development, software architecture, and best practices</div>
+                <div class="degree-info">Comprehensive training in full-stack development, software architecture, and
+                    best practices</div>
             </div>
-            
-            <div class="education-item">
+
+            <!-- <div class="education-item">
                 <div class="degree-title">Senior School Certificate Examination (SSCE)</div>
                 <div class="degree-details">Methodist High School, Ekiti State, Nigeria | 2009 - 2015</div>
-            </div>
+            </div> -->
         </div>
 
-        <div class="section">
+        <!-- <div class="section">
             <h2 class="section-title"><i class="fas fa-globe"></i> Languages</h2>
             <div class="soft-skills-list">
                 <div class="skill-item">English (Fluent - Professional Working Proficiency)</div>
                 <div class="skill-item">Yoruba (Native)</div>
             </div>
-        </div>
+        </div> -->
 
         <div class="section">
             <h2 class="section-title"><i class="fas fa-award"></i> Professional Highlights</h2>
@@ -760,4 +781,5 @@
     </div>
     <script src="js/theme.js"></script>
 </body>
+
 </html>
